@@ -30,12 +30,7 @@ function Signin() {
    }
 
     
-   
-
-
-
-
-
+  
 
   return (
     
@@ -44,10 +39,11 @@ function Signin() {
          <div class="container">
     <div class="heading">Sign In</div>
     <form action="" class="form" onSubmit={handleSubmit}>
-      <input required="" className="input" type="email" name="email" id="email" placeholder="E-mail" onChange={handleChange} />
-      <input required="" className={isValid ? "a" : "b"} class="input" type="password" name="password" id="password" placeholder="Password" onChange={handleChange} onBlur={handleBlur}  /><br/><br/>
-      {/* <input required="" class="input" type="password" value={state.password} name='password' placeholder='Password' className={isValid ? "a" : "b"} onChange={handleChange} onBlur={handleBlur} /><br/><br/> */}
-      {isValid ? "" :<p>Password</p>}
+      <input required="" className="input" type="email" name="email" id="email" placeholder="E-mail" onChange={handleChange} /><br/>
+      <input required="" className={isValid ? "a" : "b"}  type="password" name="password" id="password" placeholder="Password" onChange={handleChange} onBlur={handleBlur}  />
+      
+      <br/><br/>
+      {isValid ? "" :<p>*Enter must be 8 charcter</p>}
       <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
       <input class="login-button" type="submit" value="Sign In" />
       
